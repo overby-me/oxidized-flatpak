@@ -411,7 +411,7 @@ for portal communication.
 ## Upstream Test Parity Plan
 
 Goal: Run tests inspired by the upstream [flatpak/flatpak](https://github.com/flatpak/flatpak)
-test suite as Nix checks, following the same pattern as `rust/awk` (one
+test suite as Nix checks, following the same pattern as `safety/oxidized/awk` (one
 `runCommand` derivation per test, listed in `default.nix`, executed via
 `nix flake check`).
 
@@ -582,8 +582,8 @@ Nix derivation. The remaining upstream tests require one or more of:
 
 These all work inside a NixOS VM test (`pkgs.testers.nixosTest`), which boots
 a full NixOS system in QEMU. The project already uses this pattern
-successfully in `rust/systemd/testsuite.nix` (upstream systemd test suite)
-and `rust/nixos/nixos-test.nix` (NixOS boot test).
+successfully in `safety/oxidized/systemd/testsuite.nix` (upstream systemd test suite)
+and `safety/oxidized/nixos/nixos-test.nix` (NixOS boot test).
 
 ### Architecture
 
